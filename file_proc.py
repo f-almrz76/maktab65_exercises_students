@@ -36,9 +36,10 @@ class File_process:
 
     def remove(self , title):
         content = self.read()
-        for i in content:
-            if i['title'] == title:
-               del i
+        for i, item in enumerate(content):
+            if item['title'] == title:
+                content.pop(i)
+                break
 
         self.write(content)
         return
