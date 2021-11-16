@@ -1,6 +1,5 @@
 import csv
 
-
 class File_process:
     def __init__(self, path):
         self.path = path
