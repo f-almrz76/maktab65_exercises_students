@@ -30,8 +30,7 @@ class File_process:
         content = self.read()
         for i in content:
             if dic['title'] == i['title']:
-                for j , item in enumerate(dic.keys()):
-                    i[j] = item
+                i.update(dic)
         self.write(content)
         return
 
